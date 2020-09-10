@@ -1,3 +1,4 @@
+Mac Os
 1. 
 a) (base) MacBook-Pro-Daniil:linux daniilpavlenko$ id
 uid=501(daniilpavlenko) gid=20(staff) groups=20(staff),12(everyone),61(localaccounts),79(_appserverusr),80(admin),81(_appserveradm),98(_lpadmin),33(_appstore),100(_lpoperator),204(_developer),250(_analyticsusers),395(com.apple.access_ftp),398(com.apple.access_screensharing),399(com.apple.access_ssh),701(com.apple.sharepoint.group.1)
@@ -27,4 +28,37 @@ Library					usr
 Network					var
 
 e) 
+
+2.
+a) 
+crw-rw-rw-  1 root            wheel            5, 125 Sep 10 09:34 ptywd             - Special file.
+dr-xr-xr-x  1 root            wheel                 0 Sep 10 09:34 fd                - Directory.
+lr-xr-xr-x  1 root            wheel                 0 Sep 10 09:34 stderr -> fd/2    - Link
+brw-r-----  1 root            operator         1,   6 Sep 10 09:34 disk1s2           - Block special file.
+
+
+b     Block special file.
+c     Character special file.
+d     Directory.
+l     Symbolic link.
+s     Socket link.
+p     FIFO.
+-     Regular file.
+
+b) 
+urandom: data
+vboxdrv: character special (33/0)
+
+c) 
+ifconfig: Mach-O 64-bit executable x86_64
+hosts: ASCII text
+
+d) 
+sdt: character special (0/0) 
+
+e) 
+same sysctl - command
+
+f) 
+Нету, MacOs
 
