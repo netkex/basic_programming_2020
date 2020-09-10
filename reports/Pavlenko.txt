@@ -9,3 +9,22 @@ c) (base) MacBook-Pro-Daniil:les1 daniilpavlenko$ pwd
 /Users/daniilpavlenko/Documents/SPBSU/linux/les1
 
 d) 
+.					System
+..					Users
+.DS_Store				Volumes
+.DocumentRevisions-V100			bin
+.OSInstallerMessages			cores
+.PKInstallSandboxManager-SystemSoftware	dev
+.Spotlight-V100				etc
+.Trashes				home
+.adobeTemp				installer.failurerequests
+.dbfseventsd				net
+.file					opt
+.fseventsd				private
+.vol					sbin
+Applications				tmp
+Library					usr
+Network					var
+
+e) 
+
