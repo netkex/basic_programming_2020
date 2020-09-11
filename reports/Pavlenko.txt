@@ -64,10 +64,18 @@ f)
 
 3.
 a)
+mkdir test
+cd test
+mkdir mytest
+cd mytest/
 
 b) 
+touch f1.txt
+touch f2.txt
+touch f3.txt
 
 c) 
+(base) MacBook-Pro-Daniil:mytest daniilpavlenko$ cp -R /etc/hosts /var/tmp/test/mytest
 (base) MacBook-Pro-Daniil:mytest daniilpavlenko$ ls -lt
 total 8
 -rw-r--r--  1 daniilpavlenko  wheel  213 Sep 10 16:33 hosts
@@ -82,6 +90,7 @@ total 0
 -rw-r--r--  1 daniilpavlenko  wheel  0 Sep 10 16:29 f2.txt
 -rw-r--r--  1 daniilpavlenko  wheel  0 Sep 10 16:29 f3.txt
 -rw-r--r--  1 daniilpavlenko  wheel  0 Sep 10 16:29 hosts
+// Осталось только 3 файлы
 
 e) 
 (base) MacBook-Pro-Daniil:mytest daniilpavlenko$ rm f2.txt
@@ -91,23 +100,33 @@ total 0
 -rw-r--r--  1 daniilpavlenko  wheel  0 Sep 10 16:29 hosts
 
 f)
+(base) MacBook-Pro-Daniil:mytest daniilpavlenko$ sudo cp -R /var/tmp/test/mytest /pwd
 
 g)
+rm -R mytest/
 
 h)
+rm -R test/
 
 i)
+cd /tmp
 
 j)
+nano digits.txt
 
 k)
 cat digits.txt digits.txt > tt2.txt
 
 l) 
-	7 раз пункт k
+cat digits.txt digits.txt > tt2.txt
+cat tt2.txt tt2.txt > tt4.txt
+cat tt4.txt tt4.txt > tt8.txt
+cat tt8.txt tt8.txt > tt16.txt
+cat tt16.txt tt16.txt > tt32.txt
+cat tt32.txt tt32.txt digits.txt > tt65.txt
 
 m)
- wc -l tt65.txt 
+(base) MacBook-Pro-Daniil:tmp daniilpavlenko$ wc -l tt65.txt 
   65 tt65.txt
 
 n)
@@ -123,7 +142,7 @@ p)
 
 2) (base) MacBook-Pro-Daniil:tmp daniilpavlenko$ ls -a /etc | wc -l
      116
-(base) MacBook-Pro-Daniil:tmp daniilpavlenko$ ls /etc | wc -l
+   (base) MacBook-Pro-Daniil:tmp daniilpavlenko$ ls /etc | wc -l
      114
 
 q)
