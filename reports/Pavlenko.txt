@@ -10,6 +10,7 @@ c) (base) MacBook-Pro-Daniil:les1 daniilpavlenko$ pwd
 /Users/daniilpavlenko/Documents/SPBSU/linux/les1
 
 d) 
+(base) MacBook-Pro-Daniil:/ daniilpavlenko$ ls -a
 .					System
 ..					Users
 .DS_Store				Volumes
@@ -31,6 +32,8 @@ e)
 
 2.
 a) 
+(base) MacBook-Pro-Daniil:dev daniilpavlenko$ ls -l
+(base) MacBook-Pro-Daniil:dev daniilpavlenko$ man ls
 crw-rw-rw-  1 root            wheel            5, 125 Sep 10 09:34 ptywd             - Special file.
 dr-xr-xr-x  1 root            wheel                 0 Sep 10 09:34 fd                - Directory.
 lr-xr-xr-x  1 root            wheel                 0 Sep 10 09:34 stderr -> fd/2    - Link
@@ -46,15 +49,23 @@ p     FIFO.
 -     Regular file.
 
 b) 
+(base) MacBook-Pro-Daniil:dev daniilpavlenko$ file -s urandom
 urandom: data
+(base) MacBook-Pro-Daniil:dev daniilpavlenko$ sudo file -s vboxdrv
+vboxdrv: cannot open: Permission denied
+(base) MacBook-Pro-Daniil:dev daniilpavlenko$ sudo file vboxdrv
 vboxdrv: character special (33/0)
 
 c) 
-ifconfig: Mach-O 64-bit executable x86_64
-hosts: ASCII text
+(base) MacBook-Pro-Daniil:dev daniilpavlenko$ file /sbin/ifconfig 
+/sbin/ifconfig: Mach-O 64-bit executable x86_64
+(base) MacBook-Pro-Daniil:dev daniilpavlenko$ file /etc/hosts
+/etc/hosts: ASCII text
 
 d) 
-sdt: character special (0/0) 
+(base) MacBook-Pro-Daniil:dev daniilpavlenko$ file /dev/sdt 
+/dev/sdt: character special (0/0)
+// c командой $file -s$ терминал зависает и ничего не выдает
 
 e) 
 same sysctl - command
