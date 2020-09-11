@@ -1,4 +1,3 @@
-Mac Os
 1. 
 a) (base) MacBook-Pro-Daniil:linux daniilpavlenko$ id
 uid=501(daniilpavlenko) gid=20(staff) groups=20(staff),12(everyone),61(localaccounts),79(_appserverusr),80(admin),81(_appserveradm),98(_lpadmin),33(_appstore),100(_lpoperator),204(_developer),250(_analyticsusers),395(com.apple.access_ftp),398(com.apple.access_screensharing),399(com.apple.access_ssh),701(com.apple.sharepoint.group.1)
@@ -49,6 +48,7 @@ p     FIFO.
 -     Regular file.
 
 b) 
+
 (base) MacBook-Pro-Daniil:dev daniilpavlenko$ file -s urandom
 urandom: data
 (base) MacBook-Pro-Daniil:dev daniilpavlenko$ sudo file -s vboxdrv
@@ -63,15 +63,40 @@ c)
 /etc/hosts: ASCII text
 
 d) 
-(base) MacBook-Pro-Daniil:dev daniilpavlenko$ file /dev/sdt 
-/dev/sdt: character special (0/0)
-// c командой $file -s$ терминал зависает и ничего не выдает
+daniil@daniil-VirtualBox:/dev$ file /dev/sda1
+/dev/sda1: block special (8/1)
+daniil@daniil-VirtualBox:/dev$ sudo file -s /dev/sda1
+/dev/sda1: DOS/MBR boot sector, code offset 0x58+2, OEM-ID "mkfs.fat", sectors/cluster 8, Media descriptor 0xf8, sectors/track 63, heads 255, hidden sectors 2048, sectors 1048576 (volumes > 32 MB), FAT (32 bit), sectors/FAT 1024, reserved 0x1, serial number 0xc9740e7d, unlabeled
+
+// У команды file -s больше прав на просмотр типа фойла(и самого файла)
 
 e) 
-same sysctl - command
+daniil@daniil-VirtualBox:/dev$ file -s /proc/cpuinfo 
+/proc/cpuinfo: ASCII text, with very long lines
+daniil@daniil-VirtualBox:/dev$ file /proc/cpuinfo 
+/proc/cpuinfo: empty
+
+-r--r--r--  1 root             root                           0 сен 11 23:17 cpuinfo
+// cpuinfo - Пустой файл типа "text"
 
 f) 
-Нет, MacOs
+daniil@daniil-VirtualBox:/etc/init.d$ stat acpid
+  File: acpid
+  Size: 2269      	Blocks: 8          IO Block: 4096   regular file
+Device: 805h/2053d	Inode: 1574457     Links: 1
+Access: (0755/-rwxr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2020-09-11 23:30:14.917821319 +0300
+Modify: 2019-11-28 16:01:54.000000000 +0300
+Change: 2020-09-09 17:54:37.682203896 +0300
+ Birth: -
+daniil@daniil-VirtualBox:/etc/init.d$ file acpid
+acpid: POSIX shell script, ASCII text executable
+daniil@daniil-VirtualBox:/etc/init.d$ file -s acpid
+acpid: POSIX shell script, ASCII text executable
+
+// File мощнее, если так можно сказать, чем stat.
+// Stat говорит, что это обычный файл
+// File говорит, что это текстовый файл
 
 3.
 a)
@@ -101,7 +126,7 @@ total 0
 -rw-r--r--  1 daniilpavlenko  wheel  0 Sep 10 16:29 f2.txt
 -rw-r--r--  1 daniilpavlenko  wheel  0 Sep 10 16:29 f3.txt
 -rw-r--r--  1 daniilpavlenko  wheel  0 Sep 10 16:29 hosts
-// Осталось только 3 файлы
+// Осталось только 3 файлы (нет 2ух файлов hosts)
 
 e) 
 (base) MacBook-Pro-Daniil:mytest daniilpavlenko$ rm f2.txt
