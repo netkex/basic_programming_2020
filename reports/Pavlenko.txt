@@ -60,7 +60,7 @@ e)
 same sysctl - command
 
 f) 
-Нету, MacOs
+Нет, MacOs
 
 3.
 a)
