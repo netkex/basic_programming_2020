@@ -139,38 +139,40 @@ f)
 (base) MacBook-Pro-Daniil:mytest daniilpavlenko$ sudo cp -R /var/tmp/test/mytest /pwd
 
 g)
-rm -R mytest/
+(base) MacBook-Pro-Daniil:test daniilpavlenko$ rm -R mytest/
 
 h)
-rm -R test/
+(base) MacBook-Pro-Daniil:tmp daniilpavlenko$ rm -R test/
 
 i)
-cd /tmp
+(base) MacBook-Pro-Daniil:tmp daniilpavlenko$ cd /tmp
 
 j)
-nano digits.txt
+(base) MacBook-Pro-Daniil:tmp daniilpavlenko$ nano digits.txt
+(base) MBP-Daniil:tmp daniilpavlenko$ cat digits.txt 
+0 1 2 3 4 5 6 7 8 9
 
 k)
-cat digits.txt digits.txt > tt2.txt
+(base) MacBook-Pro-Daniil:tmp daniilpavlenko$ cat digits.txt digits.txt > tt2.txt
 
 l) 
-cat digits.txt digits.txt > tt2.txt
-cat tt2.txt tt2.txt > tt4.txt
-cat tt4.txt tt4.txt > tt8.txt
-cat tt8.txt tt8.txt > tt16.txt
-cat tt16.txt tt16.txt > tt32.txt
-cat tt32.txt tt32.txt digits.txt > tt65.txt
+(base) MacBook-Pro-Daniil:tmp daniilpavlenko$ cat digits.txt digits.txt > tt2.txt
+(base) MacBook-Pro-Daniil:tmp daniilpavlenko$ cat tt2.txt tt2.txt > tt4.txt
+(base) MacBook-Pro-Daniil:tmp daniilpavlenko$ cat tt4.txt tt4.txt > tt8.txt
+(base) MacBook-Pro-Daniil:tmp daniilpavlenko$ cat tt8.txt tt8.txt > tt16.txt
+(base) MacBook-Pro-Daniil:tmp daniilpavlenko$ cat tt16.txt tt16.txt > tt32.txt
+(base) MacBook-Pro-Daniil:tmp daniilpavlenko$ cat tt32.txt tt32.txt digits.txt > tt65.txt
 
 m)
 (base) MacBook-Pro-Daniil:tmp daniilpavlenko$ wc -l tt65.txt 
   65 tt65.txt
 
 n)
-head -n 5 /etc/passwd > hd.txt
-tail -n 5 /etc/passwd > tl.txt
+(base) MacBook-Pro-Daniil:tmp daniilpavlenko$ head -n 5 /etc/passwd > hd.txt
+(base) MacBook-Pro-Daniil:tmp daniilpavlenko$ tail -n 5 /etc/passwd > tl.txt
 
 o)
-ls -a /etc > all_etc.txt 
+(base) MacBook-Pro-Daniil:tmp daniilpavlenko$ ls -a /etc > all_etc.txt 
 
 p) 
 1) (base) MacBook-Pro-Daniil:tmp daniilpavlenko$ wc -l all_etc.txt 
