@@ -68,7 +68,7 @@ daniil@daniil-VirtualBox:/dev$ file /dev/sda1
 daniil@daniil-VirtualBox:/dev$ sudo file -s /dev/sda1
 /dev/sda1: DOS/MBR boot sector, code offset 0x58+2, OEM-ID "mkfs.fat", sectors/cluster 8, Media descriptor 0xf8, sectors/track 63, heads 255, hidden sectors 2048, sectors 1048576 (volumes > 32 MB), FAT (32 bit), sectors/FAT 1024, reserved 0x1, serial number 0xc9740e7d, unlabeled
 
-// У команды file -s больше прав на просмотр типа фойла(и самого файла)
+// У команды file -s больше прав на просмотр типа файла(и самого файла)
 
 e) 
 daniil@daniil-VirtualBox:/dev$ file -s /proc/cpuinfo 
@@ -77,7 +77,7 @@ daniil@daniil-VirtualBox:/dev$ file /proc/cpuinfo
 /proc/cpuinfo: empty
 
 -r--r--r--  1 root             root                           0 сен 11 23:17 cpuinfo
-// cpuinfo - Пустой файл типа "text"
+// cpuinfo - Пустой файл текстовой файл
 
 f) 
 daniil@daniil-VirtualBox:/etc/init.d$ stat acpid
@@ -100,15 +100,15 @@ acpid: POSIX shell script, ASCII text executable
 
 3.
 a)
-mkdir test
-cd test
-mkdir mytest
-cd mytest/
+(base) MacBook-Pro-Daniil:tmp daniilpavlenko$ mkdir test
+(base) MacBook-Pro-Daniil:tmp daniilpavlenko$ cd test
+(base) MacBook-Pro-Daniil:test daniilpavlenko$ mkdir mytest
+(base) MacBook-Pro-Daniil:test daniilpavlenko$ cd mytest/
 
 b) 
-touch f1.txt
-touch f2.txt
-touch f3.txt
+(base) MacBook-Pro-Daniil:mytest daniilpavlenko$ touch f1.txt
+(base) MacBook-Pro-Daniil:mytest daniilpavlenko$ touch f2.txt
+(base) MacBook-Pro-Daniil:mytest daniilpavlenko$ touch f3.txt
 
 c) 
 (base) MacBook-Pro-Daniil:mytest daniilpavlenko$ cp -R /etc/hosts /var/tmp/test/mytest
