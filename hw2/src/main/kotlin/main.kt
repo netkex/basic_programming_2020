@@ -11,15 +11,15 @@ fun fibonacci(num: Int): Int {
 
 fun main(args: Array<String>) {
     if(args.isEmpty()) {
-        println("sorry no asrguments")
+        println("sorry, there aren't any arguments")
     }
     for (input in args) {
         if (input.toIntOrNull() == null) {
-            println("argument isn't a number")
+            println("$input isn't a number")
             continue
         }
         if(input.toInt() <= 0) {
-            println("argument isn't a positive number")
+            println("$input isn't a positive number")
             continue
         }
         val num = input.toInt()
