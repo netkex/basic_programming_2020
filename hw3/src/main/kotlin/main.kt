@@ -2,17 +2,13 @@
 
 fun <T : Comparable<T>> qsort(list: List<T>): List<T> {
     if(list.size <= 1) return list
-    val op = list[list.indices.random()]
+    val op = list.random()
     return qsort(list.filter{it < op}) + list.filter{it == op} + qsort(list.filter{it > op})
 }
 
 fun <T> reverse(lst: List<T>): List<T> {
     return lst.foldRight(listOf<T>()) {elem, ans -> ans + listOf(elem)}
 }
-
-//fun <T> List<T>.reverse2():List<T> {
-//    return this.foldRight(listOf<T>()) {elem, ans -> ans + listOf(elem)}
-//}
 
 fun <T> List<T>.filter2(
     predicate: (T) -> Boolean
@@ -23,7 +19,7 @@ fun <T> List<T>.filter2(
 fun <T> List<T>.filter3(
     predicate: (T) -> Boolean
 ):List<T> {
-    return this.foldRight(listOf<T>()) {elem, result -> if(predicate(elem)) result + listOf(elem) else result}
+    return this.foldRight(listOf<T>()) {elem, result -> if(predicate(elem)) result + listOf(elem) else result}.reversed()
 }
 
 fun lengths(list: List<String>): List<Int> {
@@ -50,9 +46,7 @@ fun <T, R, C> List<T>.mapAccumL(
 }
 
 fun main() {
-//    val lines = readLine()!!.split(' ').toList().map {it.toInt()}
     val a = listOf<Int>(1, 3, 2, 2, 2, 4, -1)
-    println(sumq(512))
     println(a)
     println(qsort(a))
     println(reverse(a))

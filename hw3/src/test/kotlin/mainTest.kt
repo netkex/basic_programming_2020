@@ -125,3 +125,45 @@ internal class `check mapAccumL` {
             listOf("1", "22", "333").mapAccumL(0) {accum, elem -> accum + elem.length to elem.length})
     }
 }
+
+internal class `check filter2` {
+    @Test
+    fun `check list with one element`() {
+        assertEquals(listOf(1),  listOf(1).filter2 {it > 0})
+        assertEquals(listOf<Int>(), listOf(5).filter2 { it != 5 })
+    }
+
+    @Test
+    fun `simple cases`() {
+        assertEquals(listOf(1, 2, 3), (1..10).toList().filter2 { it <= 3 })
+        assertEquals(listOf(2, 4, 6, 8, 10), (1..10).toList().filter2 { it % 2 == 0 })
+    }
+
+    @Test
+    fun `check complex cases`() {
+        assertEquals(listOf("aba", "c", "kek", "abacaba"),
+            listOf("aba", "skmas", "c", "kek", "nba", "ball", "abacaba").toList().filter2 { it == it.reversed() })
+        assertEquals(('a'..'z').toList(), ('A'..'z').toList().filter2 { it.isLowerCase() })
+    }
+}
+
+internal class `check filter3` {
+    @Test
+    fun `check list with one element`() {
+        assertEquals(listOf(1),  listOf(1).filter3 {it > 0})
+        assertEquals(listOf<Int>(), listOf(5).filter3 { it != 5 })
+    }
+
+    @Test
+    fun `simple cases`() {
+        assertEquals(listOf(1, 2, 3), (1..10).toList().filter3 { it <= 3 })
+        assertEquals(listOf(2, 4, 6, 8, 10), (1..10).toList().filter3 { it % 2 == 0 })
+    }
+
+    @Test
+    fun `check complex cases`() {
+        assertEquals(listOf("aba", "c", "kek", "abacaba"),
+            listOf("aba", "skmas", "c", "kek", "nba", "ball", "abacaba").toList().filter3 { it == it.reversed() })
+        assertEquals(('a'..'z').toList(), ('A'..'z').toList().filter3 { it.isLowerCase() })
+    }
+}
